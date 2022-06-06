@@ -1,0 +1,19 @@
+<div class="main-cont">
+    <div class="nav-bar">
+      <button type="button" class="btn" (click)="homeFunc()">Home</button>
+      <button type="button" class="btn" (click)="projectFunc()">Projects</button>
+      <button type="button" class="btn" (click)="aboutFunc()">About Us</button>
+    </div>
+    
+    <div *ngIf="hideHome" class="display">
+      <app-home></app-home>
+    </div>
+    <div *ngIf="hideProjects" class="display">
+      <app-projects></app-projects>
+    </div>
+    <div *ngIf="hideAbout" class="display">
+      <app-about></app-about>
+    </div>
+  
+</div>
+<router-outlet></router-outlet>
